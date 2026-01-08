@@ -18,8 +18,8 @@ def is_enabled(value, default):
 # Bot Information Configuration
 # ============================
 SESSION = environ.get('SESSION', 'dreamxbotz_search')   # Session name for the bot
-API_ID = int(environ.get('API_ID', '')) # API ID from my.telegram.org
-API_HASH = environ.get('API_HASH', '')  # API Hash from my.telegram.org
+API_ID = int(environ.get('API_ID', '37375482')) # API ID from my.telegram.org
+API_HASH = environ.get('API_HASH', '8bbf2e467afd1e649a0ed58269c1f3fb')  # API Hash from my.telegram.org
 BOT_TOKEN = environ.get('BOT_TOKEN', "")    # Bot token from @BotFather
 
 # ============================
@@ -43,20 +43,20 @@ FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c
 # ============================
 # Admin, Channels & Users Configuration
 # ============================
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '634637418').split()] # Replace with the actual admin ID(s) to add
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-100').split()]  # Channel id for auto indexing (make sure bot is admin)
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7368031156').split()] # Replace with the actual admin ID(s) to add
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '1003655411883').split()]  # Channel id for auto indexing (make sure bot is admin)
 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-100'))  # Log channel id (make sure bot is admin)
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-100'))  # Bin channel id (make sure bot is admin)
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-100'))  # Premium logs channel id
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-100').split()] #(make sure bot is admin)
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-100')  # Support group id (make sure bot is admin)
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-100')  # Request channel id (make sure bot is admin)
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003655411883'))  # Log channel id (make sure bot is admin)
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1003667555937'))  # Bin channel id (make sure bot is admin)
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003205032844'))  # Premium logs channel id
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '1003655411883').split()] #(make sure bot is admin)
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-5152275386')  # Support group id (make sure bot is admin)
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1003655411883')  # Request channel id (make sure bot is admin)
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/')  # Support group link (make sure bot is admin)
 
 # FORCE_SUB 
-auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-100")# requst to join Channel for force sub (make sure bot is admin) only for bot ADMINS  
-auth_channels     = environ.get("AUTH_CHANNELS", "-100")# Channels for force sub (make sure bot is admin)
+auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-1002756876339")# requst to join Channel for force sub (make sure bot is admin) only for bot ADMINS  
+auth_channels     = environ.get("AUTH_CHANNELS", "-1002756876339")# Channels for force sub (make sure bot is admin)
 
 # ============================
 # Payment Configuration
@@ -75,7 +75,7 @@ STAR_PREMIUM_PLANS = {
 # ============================
 # MongoDB Configuration
 # ============================
-DATABASE_URI = environ.get('DATABASE_URI', "")  # MongoDB URI for the database
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://mvishal1670_db_user:vishal123@cluster0.ew5tut1.mongodb.net/?appName=Cluster0")  # MongoDB URI for the database
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0") # Database name (default: cluster)
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'dreamcinezone_files') # Collection name (default: dreamcinezone_files)
 
@@ -86,7 +86,7 @@ DATABASE_URI2 = environ.get('DATABASE_URI2', "")  # MongoDB URI for the second d
 # Movie Notification & Update Settings
 # ============================
 MOVIE_UPDATE_NOTIFICATION = bool(environ.get('MOVIE_UPDATE_NOTIFICATION', False))  # Notification On (True) / Off (False)
-MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-100'))  # Notification of sent to your channel
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '1003655411883'))  # Notification of sent to your channel
 DREAMXBOTZ_IMAGE_FETCH = bool(environ.get('DREAMXBOTZ_IMAGE_FETCH', True))  # On (True) / Off (False)
 LINK_PREVIEW = bool(environ.get('LINK_PREVIEW', False)) # Shows link preview in notification msg instead of image
 ABOVE_PREVIEW = bool(environ.get('ABOVE_PREVIEW', True)) # Shows link preview above the text in notification msg if True else below the msg
@@ -97,9 +97,9 @@ LANDSCAPE_POSTER = bool(environ.get('LANDSCAPE_POSTER', True)) # Shows landscape
 # ============================
 # Verification Settings
 # ============================
-IS_VERIFY = is_enabled('IS_VERIFY', False)  # Verification On (True) / Off (False)
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-100')) #Verification Channel Id 
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-100')) #If Anyone Set Your Bot In Any Group And Set Shortner In That Group Then In This Channel The All Details Come
+IS_VERIFY = is_enabled('IS_VERIFY', True)  # Verification On (True) / Off (False)
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1003630583247')) #Verification Channel Id 
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1003536618630')) #If Anyone Set Your Bot In Any Group And Set Shortner In That Group Then In This Channel The All Details Come
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://telegra.ph/file/9ecc5d6e4df5b83424896.jpg")
 
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/dreamxbotz")   # Tutorial link for verification
@@ -107,14 +107,14 @@ TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/dreamxbotz")   # Second tut
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/dreamxbotz")   # Third tutorial link for verification
 
 # Verification (Must Fill All Veriables. Else You Got Error
-SHORTENER_API = environ.get("SHORTENER_API", "a7ac9b3012c67d7491414cf272d82593c75f6cbb") # Shortener API key
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "omegalinks.in") # Shortener website
+SHORTENER_API = environ.get("SHORTENER_API", "0f5d9e6d5f6f00bb29bf5afee4b90ad6456b754c") # Shortener API key
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "arolinks.com") # Shortener website
 
-SHORTENER_API2 = environ.get("SHORTENER_API2", "a7ac9b3012c67d7491414cf272d82593c75f6cbb")  # Shortener API key for second website
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "omegalinks.in") # Shortener website for second website
+SHORTENER_API2 = environ.get("SHORTENER_API2", "0f5d9e6d5f6f00bb29bf5afee4b90ad6456b754c")  # Shortener API key for second website
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "arolinks.com") # Shortener website for second website
 
-SHORTENER_API3 = environ.get("SHORTENER_API3", "a7ac9b3012c67d7491414cf272d82593c75f6cbb")  
-SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "omegalinks.in") # Shortener website for third website
+SHORTENER_API3 = environ.get("SHORTENER_API3", "0f5d9e6d5f6f00bb29bf5afee4b90ad6456b754c")  
+SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "arolinks.com") # Shortener website for third website
 
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "1200")) # Time gap for two-step verification in seconds (default: 20 minutes)
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))    
