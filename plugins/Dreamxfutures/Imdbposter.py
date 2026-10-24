@@ -9,7 +9,7 @@ from imdb import Cinemagoer
 
 
 logger = logging.getLogger(__name__)
-ia = Cinemagoer("http")
+ia = Cinemagoer("https")
 LONG_IMDB_DESCRIPTION = False
 
 Image.MAX_IMAGE_PIXELS = None
